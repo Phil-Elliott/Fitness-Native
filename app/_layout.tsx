@@ -1,16 +1,22 @@
-import { Slot } from "expo-router";
-import Header from "../components/layout/header/Header";
-import Footer from "../components/layout/footer/Footer";
-import { View } from "react-native";
+import { ClerkProvider } from "@clerk/clerk-expo";
+import { Stack } from "expo-router";
+import Constants from "expo-constants";
 
-export default function MainLayout() {
+const StackLayout = () => {
   return (
-    <View className="flex-1 flex flex-col">
-      <Header />
-      <View className="flex-1">
-        <Slot />
-      </View>
-      <Footer />
-    </View>
+    <ClerkProvider
+      publishableKey={Constants.expoConfig?.extra?.clerkPublishableKey}
+    >
+      <Stack>
+        <Stack.Screen
+          name="(tabs)"
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack>
+    </ClerkProvider>
   );
-}
+};
+
+export default StackLayout;
