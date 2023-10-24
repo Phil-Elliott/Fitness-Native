@@ -34,3 +34,7 @@ Display Workout: A detailed view of a specific past or planned workout.
 New Workout: Create one-off workouts.
 Routine Library: View and manage saved workout routines.
 New Routine: Plan and save a series of workouts (a routine) for different days.
+
+
+
+https://www.figma.com/file/hNJTNHMLAIvvxQbyoUoHbB/FitMax?type=design&node-id=0-1&mode=design&t=zgsI95jj5qTu869q-0

@@ -2,7 +2,7 @@ import { Link } from "expo-router";
 import React from "react";
 import { View, Text } from "react-native";
 
-const routines = () => {
+const Routines = () => {
   return (
     <View>
       <Text>Routines</Text>
@@ -13,4 +13,4 @@ const routines = () => {
   );
 };
 
-export default routines;
+export default Routines;

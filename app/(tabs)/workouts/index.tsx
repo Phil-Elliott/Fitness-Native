@@ -2,7 +2,7 @@ import { Link } from "expo-router";
 import React from "react";
 import { View, Text } from "react-native";
 
-const workouts = () => {
+const Workouts = () => {
   return (
     <View>
       <Text>Workouts</Text>
@@ -13,4 +13,4 @@ const workouts = () => {
   );
 };
 
-export default workouts;
+export default Workouts;
