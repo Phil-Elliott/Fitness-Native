@@ -7,12 +7,14 @@ interface UserSettings {
 }
 
 interface SettingsState {
-  userSettings: UserSettings | null;
+  userSettings: UserSettings;
   status: "idle" | "loading" | "failed";
 }
 
 const initialState: SettingsState = {
-  userSettings: null,
+  userSettings: {
+    theme: "light",
+  },
   status: "idle",
 };
 
@@ -24,9 +26,7 @@ const settingsSlice = createSlice({
       state.userSettings = action.payload;
     },
     setTheme: (state, action: PayloadAction<Theme>) => {
-      if (state.userSettings) {
-        state.userSettings.theme = action.payload;
-      }
+      state.userSettings.theme = action.payload;
     },
   },
 });
