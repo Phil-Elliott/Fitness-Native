@@ -1,7 +1,10 @@
 import { Tabs } from "expo-router";
 import Icon from "react-native-vector-icons/Ionicons";
+import { useAuth } from "@clerk/clerk-expo";
 
 const AuthLayout = () => {
+  const { isSignedIn } = useAuth();
+
   return (
     <Tabs
       initialRouteName="home"
@@ -26,6 +29,7 @@ const AuthLayout = () => {
             return <Icon name="grid" color={color} size={size} />;
           },
         }}
+        redirect={!isSignedIn}
       />
       <Tabs.Screen
         name="routines"
@@ -35,6 +39,7 @@ const AuthLayout = () => {
             return <Icon name="list" color={color} size={size} />;
           },
         }}
+        redirect={!isSignedIn}
       />
       <Tabs.Screen
         name="workouts"
@@ -44,6 +49,7 @@ const AuthLayout = () => {
             return <Icon name="barbell" color={color} size={size} />;
           },
         }}
+        redirect={!isSignedIn}
       />
       <Tabs.Screen
         name="settings"
@@ -53,6 +59,7 @@ const AuthLayout = () => {
             return <Icon name="settings" color={color} size={size} />;
           },
         }}
+        redirect={!isSignedIn}
       />
     </Tabs>
   );
