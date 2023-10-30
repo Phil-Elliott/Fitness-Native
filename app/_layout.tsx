@@ -31,7 +31,7 @@ const StackLayout = () => {
       >
         <Stack>
           <Stack.Screen
-            name="(tabs)"
+            name="(auth)"
             options={{
               headerShown: false,
             }}
