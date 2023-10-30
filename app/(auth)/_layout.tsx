@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const TabsLayout = () => {
+const AuthLayout = () => {
   return (
     <Tabs
       initialRouteName="home"
@@ -58,4 +58,4 @@ const TabsLayout = () => {
   );
 };
 
-export default TabsLayout;
+export default AuthLayout;
