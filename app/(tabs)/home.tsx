@@ -1,9 +1,10 @@
 import { View, Text } from "react-native";
+import Header from "../../components/home/Header";
 
 const Home = () => {
   return (
-    <View className="dark:bg-blue-300 h-full">
-      <Text>Hello</Text>
+    <View className="h-full pt-10 px-4 dark:bg-gray-700 dark:text-white">
+      <Header />
     </View>
   );
 };

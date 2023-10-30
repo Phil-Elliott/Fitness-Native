@@ -3,6 +3,7 @@ import store from "../redux/store";
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { Stack } from "expo-router";
 import Constants from "expo-constants";
+import { View } from "react-native";
 
 const StackLayout = () => {
   return (

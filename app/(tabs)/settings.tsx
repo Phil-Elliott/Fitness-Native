@@ -6,8 +6,8 @@ const Settings = () => {
   const { colorScheme, setColorScheme } = useColorScheme();
 
   return (
-    <View className={`flex-1 justify-center items-center dark:bg-blue-300`}>
-      <Text className={`text-4xl font-bold`}>Settings</Text>
+    <View className="flex-1 justify-center items-center dark:bg-blue-300">
+      <Text className="text-4xl font-bold">Settings</Text>
       <Button
         title="Toggle Theme"
         onPress={() =>
