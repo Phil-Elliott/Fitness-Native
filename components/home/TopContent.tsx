@@ -14,3 +14,11 @@ const TopContent = () => {
 };
 
 export default TopContent;
+
+/*
+
+- Could have dif pics to be displayed for each message
+- Plug in the messages
+- Plug in the links when button is clicked
+
+*/
