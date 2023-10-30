@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <View className="flex-row items-center">
+    <View className="flex-row items-center pb-4">
       <View className="w-14 h-14 bg-gray-300 rounded-full justify-center items-center">
         <Text className="text-center text-xl font-bold">P</Text>
       </View>
