@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import { useSignIn } from "@clerk/clerk-expo";
 import { Link } from "expo-router";
-import React, { useState } from "react";
 import {
   View,
   StyleSheet,
@@ -33,7 +33,7 @@ const Login = () => {
       // This indicates the user is signed in
       await setActive({ session: completeSignIn.createdSessionId });
     } catch (err: any) {
-      alert(err.errors[0].message);
+      Alert.alert(err.errors[0].message);
     } finally {
       setLoading(false);
     }
@@ -45,7 +45,7 @@ const Login = () => {
 
       <TextInput
         autoCapitalize="none"
-        placeholder="simon@galaxies.dev"
+        placeholder="email address"
         value={emailAddress}
         onChangeText={setEmailAddress}
         style={styles.inputField}

@@ -29,9 +29,6 @@ const Register = () => {
         password,
       });
 
-      console.log("User created");
-      console.log(signUp);
-
       // Send verification Email
       await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
 
@@ -39,7 +36,6 @@ const Register = () => {
       setPendingVerification(true);
     } catch (err: any) {
       alert(err.errors[0].message);
-      console.log(err);
     } finally {
       setLoading(false);
     }
@@ -56,11 +52,9 @@ const Register = () => {
       const completeSignUp = await signUp.attemptEmailAddressVerification({
         code,
       });
-      console.log(completeSignUp);
       await setActive({ session: completeSignUp.createdSessionId });
     } catch (err: any) {
       alert(err.errors[0].message);
-      console.log(err);
     } finally {
       setLoading(false);
     }
