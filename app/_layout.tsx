@@ -59,14 +59,3 @@ const StackLayout = () => {
 };
 
 export default StackLayout;
-
-{
-  /* <Stack>
-          <Stack.Screen
-            name="(auth)"
-            options={{
-              headerShown: false,
-            }}
-          />
-        </Stack> */
-}
