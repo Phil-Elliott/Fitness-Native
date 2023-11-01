@@ -1,15 +1,21 @@
 import { useEffect } from "react";
-import { Provider } from "react-redux";
-import store from "../redux/store";
-import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
-import * as SecureStore from "expo-secure-store";
-import { Stack, Slot, useRouter, useSegments } from "expo-router";
+
+import { Slot, useRouter, useSegments } from "expo-router";
 import Constants from "expo-constants";
+
+import { ClerkProvider, useAuth, useUser } from "@clerk/clerk-expo";
+import * as SecureStore from "expo-secure-store";
+
+import store from "../redux/store";
+import { useDispatch, Provider } from "react-redux";
+import { setUserDetails } from "../redux/slices/userSlice";
 
 const InitialLayout = () => {
   const { isLoaded, isSignedIn } = useAuth();
+  const { user } = useUser();
   const segments = useSegments();
   const router = useRouter();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -20,6 +26,16 @@ const InitialLayout = () => {
 
     if (isSignedIn && !inTabsGroup) {
       router.replace("/home");
+
+      // Update Redux store with user details
+      const userDetails = {
+        firstName: user?.firstName || null,
+        lastName: user?.lastName || null,
+        username: user?.username || null,
+        imageUrl: user?.imageUrl || null,
+        primaryEmailAddress: user?.primaryEmailAddress?.emailAddress || null,
+      };
+      dispatch(setUserDetails(userDetails));
     } else if (!isSignedIn) {
       router.replace("/login");
     }

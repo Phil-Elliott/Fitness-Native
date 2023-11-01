@@ -1,7 +1,7 @@
 export type User = {
   firstName: string | null;
   lastName: string | null;
-  username: string;
-  imageUrl: string;
-  primaryEmailAddress: string;
+  username: string | null;
+  imageUrl: string | null;
+  primaryEmailAddress: string | null;
 };
