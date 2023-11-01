@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Fitness-Native",
-    "scheme": "your-app-scheme",
+    "scheme": "fitnessnative",
     "slug": "Fitness-Native",
     "version": "1.0.0",
     "orientation": "portrait",

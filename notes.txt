@@ -1,0 +1,40 @@
+1) Authentication & Profile
+     - Login / Signup: Use Clerk
+     - Profile page
+2) Dashboard/Home Page
+     - List of recent workouts (showing the date of the workout and a summary like total exercises).
+     - Button or link to start a new workout.
+3) New Workout Page
+     - A date picker or today's date set by default (Or make in advance or do this later)
+     - Start with just writing the exercise
+     - A button to add sets for each exercise, where you can input reps and weight.
+     - Save button: Save the workout to the backend. (Maybe save as you go?)
+4) Workout History Page
+    - List of workouts, with date and summary.
+    - Clicking on a workout should take you to the workout page, where you can see the exercises and sets.
+5) Workout Page
+    - Display the date of the workout.
+    - List all the exercises done during that workout session.
+    - For each exercise, list all the sets, reps, and weights.
+    - Options to edit or delete exercises or sets.
+
+
+Pages
+2) Dashboard / Home
+3) New Workout
+4) Workout History
+5) Workout Page
+
+
+Home: A dashboard view for quick navigation and a snapshot of the user's current status or upcoming workouts.
+Workout History: Review past workouts and track progress.
+Settings: Manage app preferences and user information.
+Active Workout: For users currently in the middle of a workout, offering the ability to input exercise data in real-time.
+Display Workout: A detailed view of a specific past or planned workout.
+New Workout: Create one-off workouts.
+Routine Library: View and manage saved workout routines.
+New Routine: Plan and save a series of workouts (a routine) for different days.
+
+
+
+https://www.figma.com/file/hNJTNHMLAIvvxQbyoUoHbB/FitMax?type=design&node-id=0-1&mode=design&t=zgsI95jj5qTu869q-0
