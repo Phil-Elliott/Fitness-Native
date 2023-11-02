@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "expo-router";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import Header from "../../../components/workouts/Header";
 import ScrollCalendar from "../../../components/workouts/ScrollCalendar";
 
@@ -14,16 +13,3 @@ const Workouts = () => {
 };
 
 export default Workouts;
-
-/*
-<View>
-      <Text>Workouts</Text>
-      <Link href="/workouts/1">Workouts 1</Link>
-      <Link href="/workouts/2">Workouts 2</Link>
-      <Link href="/workouts/addWorkout">Workouts 3</Link>
-    </View>
-
-  
-
-
-*/

@@ -98,3 +98,6 @@ const styles = StyleSheet.create({
 export default Login;
 
 //https://clerk.com/docs/backend-requests/handling/nodejs
+
+// Get backend clerk working
+// Add a fetch request in upcoming component to test it out

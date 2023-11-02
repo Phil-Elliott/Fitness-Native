@@ -42,9 +42,9 @@ const ScrollCalendar = () => {
 
   return (
     <GestureDetector gesture={panGesture}>
-      <View className="space-x-4 py-4 flex-row">
+      <View className="py-4 flex-row justify-between">
         {days?.map((day) => (
-          <TouchableOpacity className="w-9 h-9 bg-gray-300 rounded-full justify-center items-center">
+          <TouchableOpacity className="w-10 h-10 bg-gray-300 rounded-full justify-center items-center">
             <Text className="text-lg font-bold">{day.getDate()}</Text>
           </TouchableOpacity>
         ))}
