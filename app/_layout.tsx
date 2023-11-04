@@ -63,14 +63,14 @@ const tokenCache = {
 
 const StackLayout = () => {
   return (
-    <Provider store={store}>
-      <ClerkProvider
-        publishableKey={Constants.expoConfig?.extra?.clerkPublishableKey}
-        tokenCache={tokenCache}
-      >
+    <ClerkProvider
+      publishableKey={Constants.expoConfig?.extra?.clerkPublishableKey}
+      tokenCache={tokenCache}
+    >
+      <Provider store={store}>
         <InitialLayout />
-      </ClerkProvider>
-    </Provider>
+      </Provider>
+    </ClerkProvider>
   );
 };
 
