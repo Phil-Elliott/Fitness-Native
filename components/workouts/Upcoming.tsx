@@ -41,7 +41,7 @@ const Upcoming = () => {
 
   // If data is loaded, display the workouts
   return (
-    <View className="space-y-4">
+    <View className="space-y-4 pb-4">
       <View className="flex-row justify-between items-center">
         <Text className="text-xl font-semibold">Upcoming Workouts</Text>
         <Pressable onPress={() => console.log("hide")}>
