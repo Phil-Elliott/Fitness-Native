@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { useQuery, gql } from "@apollo/client";
 
 // Query to get all workouts for a user
@@ -41,16 +41,13 @@ const Upcoming = () => {
 
   // If data is loaded, display the workouts
   return (
-    <View>
-      <Text>Upcoming Workouts:</Text>
-      {/* {data.userWorkouts.map((workout) => (
-        <View key={workout.id}>
-          <Text>Date: {workout.date}</Text>
-          {workout.exercises.map((exercise) => (
-            <Text key={exercise.id}>{exercise.name}</Text>
-          ))}
-        </View>
-      ))} */}
+    <View className="space-y-4">
+      <View className="flex-row justify-between items-center">
+        <Text className="text-xl font-semibold">Upcoming Workouts</Text>
+        <Pressable onPress={() => console.log("hide")}>
+          <Text>Hide</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
