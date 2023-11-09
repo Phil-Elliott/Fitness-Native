@@ -15,7 +15,7 @@ const GET_USER_WORKOUTS = gql`
   }
 `;
 
-const Upcoming = () => {
+const Activity = () => {
   // Assuming you have the user ID from context, props, or state
   const userId = 1; // Replace with actual user ID
 
@@ -43,7 +43,7 @@ const Upcoming = () => {
   return (
     <View className="space-y-4">
       <View className="flex-row justify-between items-center">
-        <Text className="text-xl font-semibold">Upcoming Workouts</Text>
+        <Text className="text-xl font-semibold">Activity</Text>
         <Pressable onPress={() => console.log("hide")}>
           <Text>Hide</Text>
         </Pressable>
@@ -52,4 +52,4 @@ const Upcoming = () => {
   );
 };
 
-export default Upcoming;
+export default Activity;
