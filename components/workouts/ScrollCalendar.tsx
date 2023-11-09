@@ -53,27 +53,40 @@ const ScrollCalendar = ({
   });
 
   return (
-    <GestureDetector gesture={panGesture}>
-      <View className="py-4 flex-row justify-between">
-        {days?.map((day) => {
-          // Determine if the current day in the map iteration is the selected day
-          const isSelected =
-            format(day, "yyyy-MM-dd") === format(selectedDay, "yyyy-MM-dd");
-
-          return (
-            <TouchableOpacity
-              className={`w-10 h-10 ${
-                isSelected ? "bg-gray-700" : "bg-gray-300"
-              } rounded-full justify-center items-center`}
-              key={day.getDate()}
-              onPress={() => setSelectedDay(day)}
-            >
-              <Text className="text-lg font-bold">{day.getDate()}</Text>
-            </TouchableOpacity>
-          );
-        })}
+    <View>
+      <View className="pt-4 flex-row justify-between">
+        <Text className="text-base font-bold">
+          {format(currentWeekStart, "MMMM yyyy")}
+        </Text>
       </View>
-    </GestureDetector>
+      <GestureDetector gesture={panGesture}>
+        <View className="pb-4 pt-2 flex-row justify-between">
+          {days?.map((day) => {
+            // Determine if the current day in the map iteration is the selected day
+            const isSelected =
+              format(day, "yyyy-MM-dd") === format(selectedDay, "yyyy-MM-dd");
+
+            // Format the day of the week to be displayed
+            const dayOfWeek = format(day, "EEE");
+
+            return (
+              <View className="flex items-center gap-2">
+                <TouchableOpacity
+                  className={`w-10 h-10 ${
+                    isSelected ? "bg-gray-300" : ""
+                  } rounded-full justify-center items-center`}
+                  key={day.getDate()}
+                  onPress={() => setSelectedDay(day)}
+                >
+                  <Text className="font-bold text-base">{day.getDate()}</Text>
+                </TouchableOpacity>
+                <Text className="">{dayOfWeek}</Text>
+              </View>
+            );
+          })}
+        </View>
+      </GestureDetector>
+    </View>
   );
 };
 
