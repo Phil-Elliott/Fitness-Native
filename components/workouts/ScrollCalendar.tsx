@@ -70,13 +70,14 @@ const ScrollCalendar = ({
             const dayOfWeek = format(day, "EEE");
 
             return (
-              <View className="flex items-center gap-2">
+              <View className="flex items-center gap-2" key={day.toISOString()}>
                 <TouchableOpacity
                   className={`w-10 h-10 ${
-                    isSelected ? "bg-gray-300" : ""
+                    isSelected ? "bg-gray-700" : ""
                   } rounded-full justify-center items-center`}
                   key={day.getDate()}
                   onPress={() => setSelectedDay(day)}
+                  activeOpacity={0.6}
                 >
                   <Text className="font-bold text-base">{day.getDate()}</Text>
                 </TouchableOpacity>
