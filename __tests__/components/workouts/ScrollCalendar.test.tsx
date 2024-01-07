@@ -92,7 +92,7 @@ describe("ScrollCalendar", () => {
       date <= endDay;
       date = dateFns.addDays(date, 1)
     ) {
-      const dateText = dateFns.format(date, "d"); // Assuming 'd' is the format used in component
+      const dateText = dateFns.format(date, "d");
       expect(getAllByText(dateText).length).toBeGreaterThan(0);
     }
 

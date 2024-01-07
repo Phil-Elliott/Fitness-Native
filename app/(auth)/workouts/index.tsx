@@ -52,7 +52,7 @@ export default Workouts;
 
 /*
 
-- Write tests for component (ScrollCalendar, Upcoming, Activity)
+- Write intergration tests for component (ScrollCalendar, Upcoming, Activity)
 - Add data on backend to display on frontend
 - Update tests on backend to make sure that the resolver is working
 - Check out that prisma testing site to see what other tests i should be setting up
