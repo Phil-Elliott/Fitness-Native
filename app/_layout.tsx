@@ -18,7 +18,8 @@ const InitialLayout = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!isLoaded) return;
+    // isLoaded is false when the user is not signed in
+    // if (!isLoaded) return;
 
     const inTabsGroup = segments[0] === "(auth)";
 

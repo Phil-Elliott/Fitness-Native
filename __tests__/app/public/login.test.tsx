@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react-native";
 import { useSignIn } from "@clerk/clerk-expo";
 import { Alert } from "react-native";
-import Login from "../../app/(public)/login";
+import Login from "../../../app/(public)/login";
 
 // Mocking the Alert.alert method from react-native
 jest.mock("react-native", () => {
